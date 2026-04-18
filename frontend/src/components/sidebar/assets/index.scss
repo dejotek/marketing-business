@@ -1,0 +1,126 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(180deg, #3247b0 0%, #24336f 100%);
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 8px 30px rgba(15,23,42,0.08);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: transparent;
+}
+.sidebar-header h3 {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.sidebar-logo {
+  display: block;
+  max-width: 140px;
+  height: auto;
+}
+
+.sidebar-header .sidebar-logo { margin: 0 auto; }
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+
+.menu-list li {
+  display: block;
+  cursor: pointer;
+}
+
+.menu-list li a.menu-link {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 140ms ease, transform 140ms ease;
+  border-radius: 8px;
+}
+.menu-list li a.menu-link:hover {
+  background: rgba(255,255,255,0.06);
+  transform: none;
+}
+
+.menu-list li a.menu-link span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.menu-list li a.menu-link svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+.menu-list li a.menu-link span {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu-list li a.menu-link .svg-inline--fa,
+.menu-list li a.menu-link span {
+  color: white;
+}
+
+.menu-list li a.menu-link.active {
+  background: rgba(255,255,255,0.08);
+  box-shadow: inset 4px 0 0 0 rgba(79,70,229,0.22);
+}
+
+.submenu-list {
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+}
+
+.submenu:hover .submenu-list {
+  display: block;
+}
+
+.logout-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255,255,255,0.04);
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.logout-btn span {
+  margin-left: 10px;
+}
+
+.logout-btn,
+.logout-btn * {
+  color: #ffffff !important;
+}

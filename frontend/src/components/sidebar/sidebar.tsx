@@ -5,12 +5,15 @@ import { faChevronLeft, faHome, faBox, faUser, faCogs, faSignOutAlt, faComments,
 
 import { useNavigate } from 'react-router-dom';
 
+import './assets/index.scss';
+
 const Sidebar = () => {
 
   const navigate = useNavigate();
 
   const doLogout = () => {
-        navigate('/login');
+    try { localStorage.removeItem('jwt'); localStorage.removeItem('userId'); } catch(e) {}
+    navigate('/login');
   };
 
   return (
