@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Course",
+    "description": "Courses for the membership portal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+    "lessons": { "type": "json" },
+    "price": { "type": "decimal" }
+  }
+}
