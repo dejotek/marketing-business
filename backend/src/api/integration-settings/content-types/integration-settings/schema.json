@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "integration_settings",
+  "info": {
+    "singularName": "integration-settings",
+    "pluralName": "integration-settings-list",
+    "displayName": "Integration Settings",
+    "description": "Storage for external integration configuration like Google, Twilio, Stripe"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "provider": { "type": "string" },
+    "configured": { "type": "boolean", "default": false },
+    "data": { "type": "json" }
+  }
+}
