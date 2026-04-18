@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "action_logs",
+  "info": {
+    "singularName": "action-log",
+    "pluralName": "action-logs",
+    "displayName": "Action Log",
+    "description": "System action logs for auditing and dashboard"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "type": { "type": "string" },
+    "userId": { "type": "string" },
+    "payload": { "type": "json" },
+    "createdAt": { "type": "datetime" }
+  }
+}
