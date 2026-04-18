@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "funnels",
+  "info": {
+    "singularName": "funnel",
+    "pluralName": "funnels",
+    "displayName": "Funnel",
+    "description": "Sales funnels created by the builder"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": { "type": "string" },
+    "blocks": { "type": "json" },
+    "owner": { "type": "string" },
+    "publishedAt": { "type": "datetime" }
+  }
+}
