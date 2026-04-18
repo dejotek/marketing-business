@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_progress",
+  "info": {
+    "singularName": "course-progress",
+    "pluralName": "course-progresses",
+    "displayName": "Course Progress",
+    "description": "Per-user course progress storage"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "userId": { "type": "string" },
+    "courseId": { "type": "string" },
+    "progress": { "type": "json" },
+    "updatedAt": { "type": "datetime" },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course"
+    }
+  }
+}
