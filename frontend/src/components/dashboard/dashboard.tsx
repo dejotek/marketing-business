@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './assets/index.scss';
+
 const Dashboard: React.FC = () => {
   const logs: any[] = [
     { id: '1', attributes: { message: 'Zakup: kurs c1 — metoda stripe-sim', createdAt: '2026-04-18T12:00:00Z' } },
