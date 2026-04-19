@@ -3,7 +3,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './sidebar';
  
-// import './assets/layout.scss';
+import './assets/layout.scss';
  
 const ProtectedLayout: React.FC = () => {
  
