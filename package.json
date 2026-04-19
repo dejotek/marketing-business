@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fortawesome/react-fontawesome": "^3.3.0",
     "axios": "^1.15.0",
     "react-router-dom": "^7.14.1"
   }
