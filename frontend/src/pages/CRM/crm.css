@@ -1,0 +1,91 @@
+/* CRM page styles */
+.crm-container{ display:flex; flex-direction: column; gap:28px; align-items:flex-start; max-width:1400px; padding:8px 20px; }
+.crm-list{ flex:1; display:flex; flex-direction:column; gap:14px; width: 100%; }
+.crm-list .controls{ display:flex; gap:10px; align-items:center; }
+.crm-list .list { max-width: 400px; }
+.crm-search{ width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(15,23,42,0.06); background:linear-gradient(180deg,#fff,#fbfbff); box-shadow:inset 0 1px 0 rgba(255,255,255,0.6); transition:box-shadow .18s, border-color .18s; }
+.crm-search:focus{ outline:none; border-color: rgba(124,58,237,0.7); box-shadow:0 6px 20px rgba(99,102,241,0.08); }
+/* .contact-list{ background:#fff; border-radius:12px; box-shadow: 0 10px 40px rgba(2,6,23,0.06); overflow:hidden; } */
+.contact-card{ padding:14px 16px; border-bottom:1px solid rgba(15,23,42,0.04); display:flex; gap:12px; align-items:center; cursor:pointer; transition:background .12s, transform .12s; }
+.contact-card:hover{ background:linear-gradient(90deg, rgba(99,102,241,0.03), rgba(124,58,237,0.02)); transform:translateY(-2px); }
+.contact-card strong{ font-size:15px; display:block; }
+.contact-meta{ font-size:13px; color:#6b7280; }
+
+/* GRID mode styling: tiles */
+.contact-list.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:16px; padding:6px; }
+.contact-list.grid .contact-card { flex-direction: column; align-items: stretch; padding:0; border-radius:12px; overflow:hidden; border:1px solid rgba(15,23,42,0.04); background:linear-gradient(180deg,#ffffff,#fbfbff); box-shadow: 0 8px 30px rgba(2,6,23,0.06); border-bottom:none; }
+.contact-list.grid .contact-card .avatar { width:100%; height:150px; border-radius:0; margin:0; }
+.contact-list.grid .contact-card .content { padding:12px 14px; }
+.contact-list.grid .contact-card .content strong { font-size:16px; margin-bottom:6px }
+.contact-list.grid .contact-card .content .contact-meta { display:block; }
+.contact-list.grid .contact-card:hover { transform:translateY(-4px); box-shadow:0 18px 60px rgba(2,6,23,0.08); }
+
+/* LIST mode styling: rows */
+.contact-list.list { display:block; padding:6px; }
+.contact-list.list .contact-card { display:flex; gap:12px; align-items:center; padding:12px 14px; border-radius:10px; background:transparent; box-shadow:none; border:1px solid transparent }
+.contact-list.list .contact-card + .contact-card { margin-top:8px }
+.contact-list.list .contact-card:hover { background:linear-gradient(90deg, rgba(99,102,241,0.03), rgba(124,58,237,0.02)); box-shadow:0 8px 30px rgba(2,6,23,0.04) }
+
+.crm-details{ flex:1; min-width:0; }
+.details-card{ background:#fff; padding:22px; border-radius:14px; box-shadow: 0 18px 50px rgba(2,6,23,0.06); }
+.details-card h2{ font-size:20px; margin-bottom:6px; color:#0f172a; }
+.detail-meta{ color:#4b5563; font-size:14px; margin-top:4px }
+.detail-row{ display:flex; gap:12px; align-items:center; margin-top:12px; }
+.detail-row label{ width:110px; color:#374151; font-weight:700; font-size:14px; }
+.detail-row .value{ flex:1; }
+.detail-actions{ display:flex; gap:10px; margin-top:18px; }
+.btn{ cursor:pointer; padding:10px 14px; border-radius:10px; border:1px solid rgba(15,23,42,0.06); background:white; transition:transform .12s, box-shadow .12s; }
+.btn:hover{ transform:translateY(-2px); box-shadow:0 8px 30px rgba(2,6,23,0.06); }
+.btn-primary{ background: linear-gradient(90deg,#6b8cff,#7c3aed); color:white; border:none; box-shadow:0 12px 36px rgba(99,102,241,0.12); }
+.btn-danger{ background:#fee2e2; border:1px solid #fca5a5; }
+
+/* input / textarea styling inside details & modal */
+.details-card input, .details-card textarea, .modal input, .modal textarea{ width:100%; padding:10px 12px; border-radius:10px; border:1px solid rgba(15,23,42,0.06); background:linear-gradient(180deg,#fff,#fbfbff); box-shadow:inset 0 1px 0 rgba(255,255,255,0.6); font-size:14px; }
+.details-card input:focus, .details-card textarea:focus, .modal input:focus, .modal textarea:focus{ outline:none; border-color: rgba(124,58,237,0.7); box-shadow:0 10px 30px rgba(99,102,241,0.08); }
+.details-card textarea{ min-height:110px; resize:vertical; }
+
+@media (max-width:900px){
+  .crm-container{ flex-direction:column; padding:12px; }
+  .crm-list{ flex: none; width:100%; }
+  .details-card{ padding:14px; }
+  .modal{ width:92vw; }
+}
+
+/* modal */
+.overlay{ position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(2,6,23,0.45); display:flex; align-items:center; justify-content:center; z-index:60; }
+.modal{ width:720px; max-width:94vw; background:#fff; border-radius:12px; box-shadow:0 30px 80px rgba(2,6,23,0.3); padding:20px; }
+.modal h3{ margin:0 0 12px 0; }
+.modal .row{ display:flex; gap:12px; margin-top:10px; }
+.modal label{ font-weight:600; color:#374151; width:100px; }
+.modal .actions{ display:flex; gap:8px; justify-content:flex-end; margin-top:16px; }
+
+/* nested detail panel inside details area */
+.nested-panel{ position:relative; overflow:hidden; }
+.nested-panel .panel{ background:#fff; border-radius:10px; padding:16px; box-shadow:0 18px 50px rgba(2,6,23,0.06); transform:translateX(0); transition:transform .32s cubic-bezier(.2,.9,.2,1); }
+.nested-panel .panel.enter{ transform:translateX(100%); }
+.nested-panel .panel.active{ transform:translateX(0); }
+.back-btn{ display:inline-flex; gap:8px; align-items:center; padding:8px 12px; background:transparent; border:1px solid rgba(15,23,42,0.06); border-radius:8px; cursor:pointer; margin-bottom:12px; }
+
+.avatar{ width:64px; height:64px; border-radius:10px; background:linear-gradient(180deg,#eef2ff,#fff); display:inline-block; margin-right:12px; object-fit:cover; }
+.detail-avatar{ width:96px; height:96px; border-radius:12px; background:linear-gradient(180deg,#eef2ff,#fff); display:inline-block; margin-right:12px; object-fit:cover; box-shadow:0 8px 30px rgba(2,6,23,0.06); }
+
+/* Notes list styling */
+.notes-list{ display:flex; flex-direction:column; gap:8px; }
+.note-item{ display:flex; gap:8px; align-items:flex-start; }
+.note-item textarea{ min-height:56px; }
+.note-item .btn{ padding:8px 10px; }
+
+/* Todo list styling */
+.todo-list{ display:flex; flex-direction:column; gap:8px; }
+.todo-item{ display:flex; gap:8px; align-items:center; padding:8px; border-radius:8px; background:linear-gradient(180deg,#fff,#fbfbff); border:1px solid rgba(15,23,42,0.04); }
+.todo-item input[type="text"]{ border:none; background:transparent; padding:6px 8px; font-size:14px; }
+.todo-item input[type="checkbox"]{ width:18px; height:18px; }
+.todo-item .btn{ padding:6px 8px; }
+
+/* Avatar dropzone in modal */
+.avatar-drop{ display:flex; align-items:center; gap:12px; padding:12px; border:2px dashed rgba(15,23,42,0.06); border-radius:10px; background:linear-gradient(180deg,#fff,#fbfbff); cursor:pointer; }
+.avatar-drop.dragover{ border-color: rgba(124,58,237,0.7); box-shadow:0 10px 30px rgba(124,58,237,0.06); }
+.avatar-preview{ width:48px; height:48px; object-fit:cover; border-radius:8px; }
+
+.contact-list{ max-height:70vh; overflow:auto; }
+
