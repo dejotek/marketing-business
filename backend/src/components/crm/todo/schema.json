@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_crm_todos",
+  "info": {
+    "displayName": "Todo",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "done": {
+      "type": "boolean",
+      "default": false
+    },
+    "dueDate": {
+      "type": "datetime"
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}

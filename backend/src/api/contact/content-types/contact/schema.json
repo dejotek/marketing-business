@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": { "type": "string" },
+    "lastName": { "type": "string" },
+    "phone": { "type": "string", "unique": true },
+    "email": { "type": "email", "unique": true },
+    "notes": { "type": "text" },
+    "todos": { "type": "json" },
+    "avatar": { "type": "media", "multiple": false, "allowedTypes": ["images"] }
+  }
+}

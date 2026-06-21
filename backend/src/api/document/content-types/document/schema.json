@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documents",
+  "info": {
+    "singularName": "document",
+    "pluralName": "documents",
+    "displayName": "Document",
+    "description": "Uploaded documents and e-signature records"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": { "type": "string" },
+    "file": { "type": "media", "multiple": false, "required": false },
+    "signed": { "type": "boolean", "default": false },
+    "metadata": { "type": "json" }
+  }
+}

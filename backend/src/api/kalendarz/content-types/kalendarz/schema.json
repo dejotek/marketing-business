@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kalendarze",
+  "info": {
+    "singularName": "kalendarz",
+    "pluralName": "kalendarze",
+    "displayName": "Kalendarz",
+    "description": "Kalendarz - wydarzenia"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string" },
+    "start": { "type": "datetime" },
+    "end": { "type": "datetime" },
+    "color": { "type": "string" },
+    "description": { "type": "text" }
+  }
+}
